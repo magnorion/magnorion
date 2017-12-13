@@ -1,4 +1,4 @@
-# Hoylus
+# Magnorion
 
 Sobre
 ---
