@@ -8,12 +8,12 @@
     define( "ASSETS", get_template_directory_uri() . "/assets" );
     
     ### Configuração do tema
-    function hoylusConfig()
+    function magnorionConfig()
     {
         add_theme_support( 'post-thumbnails' );
         add_theme_support( 'menus' );
     }
-    add_action("after_setup_theme", "hoylusConfig");
+    add_action("after_setup_theme", "magnorionConfig");
 
     ### Assets do tema
     function assetsSite()
