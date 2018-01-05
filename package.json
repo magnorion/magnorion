@@ -4,7 +4,7 @@
   "description": "My portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --watch"
   },
   "repository": "git+ssh://git@github.com/magnorion/magnorion.git",
   "keywords": [
@@ -17,10 +17,13 @@
   },
   "homepage": "https://github.com/magnorion/magnorion#readme",
   "dependencies": {
-    "bower": "^1.8.2",
-    "gulp": "^3.9.1",
-    "gulp-livereload": "^3.8.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-watch": "^4.3.11"
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.28.8",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }

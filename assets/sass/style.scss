@@ -1,8 +1,5 @@
-@charset "UTF-8";
-/*
-*   Theme Name: Magnorion
-*   Version: 1.0
-*   Author: Magnorion
-*   Author URI: https://github.com/magnorion/magnorion
-*   Description: Este é um template do WordPress com o foco em ser usado para portfólios como: Web Design, Front-end, Fotografia etc...
-*/
+$background: #ccc;
+
+body{
+  background: $background;
+}
