@@ -1,5 +1,6 @@
 const webpack = require("webpack"),
-LivereloadPlugin = require("webpack-livereload-plugin");
+  LivereloadPlugin = require("webpack-livereload-plugin"),
+  ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   entry: __dirname + "/assets/assets.js",
   output: {
@@ -10,7 +11,14 @@ module.exports = {
     rules: [
       {
         test: /\.(s*)css$/,
-        use: ["style-loader","css-loader","sass-loader"]
+        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: [
+            { loader: "css-loader", options: {minimize: true}},
+            { loader: "sass-loader"}
+          ]
+        })
       },
       {
         test: /\.(woff|woff2|ttf|svg|eot)/,
@@ -24,6 +32,11 @@ module.exports = {
     }),
     new webpack.optimize.UglifyJsPlugin({
       minimize: true
+    }),
+    new ExtractTextPlugin("style.css"),
+    new webpack.ProvidePlugin({
+      jQuery: "jQuery",
+      $: "jQuery"
     })
   ]
 }

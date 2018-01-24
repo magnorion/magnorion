@@ -18,7 +18,8 @@
     ### Assets do tema
     function assetsSite()
     {
-        wp_enqueue_script("core", ASSETS . "/dist/site-bundle.js");
+        wp_enqueue_script( "core",  ASSETS . "/dist/site-bundle.js" );
+        wp_enqueue_style( "styles", ASSETS . "/dist/style.css" );
         wp_enqueue_script("liverload", "http://localhost:460/livereload.js");
     }
     add_action("wp_enqueue_scripts", "assetsSite");
