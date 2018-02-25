@@ -1,5 +1,62 @@
-$background: #000;
+#logo { 
+  span {
+    font-family: "lobster";
+    font-size: 30px;
+    a{
+      color: #FF7373;
+      &:active, &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
 
-body{
-  background: $background;
+ul{
+  margin: 0px;
+  list-style: none;
+  li{
+    display: inline;
+    font-family: "Cabin";
+    margin-right: 15px;
+  }
+  &#primary{
+    font-size: 15px;
+  }
+}
+
+/*
+* Nav principal
+*/
+
+nav#menu-principal{
+  height: auto;
+  background: #fff;
+  padding-bottom: 15px;
+  padding-top: 30px;
+}
+
+#primary-content{
+  padding: 0px !important;
+  background: url("../images/header.jpg");
+  background-position: fixed;
+  margin-top: 5px;
+  .container{
+    height: 50vh;
+    max-height: 300px;
+    position: relative;
+    #page-title-holder{
+      margin-top: 12%;
+      h1, p{
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        text-shadow: 1px 1px 1px #000;
+        font-family: "Cabin"
+      }
+      p{
+        font-size: 13px;
+        line-height: 2;
+      }
+    }
+  }
 }

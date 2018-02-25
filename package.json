@@ -4,7 +4,8 @@
   "description": "My portfolio",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch"
+    "dev": "webpack --watch",
+    "bs": "browser-sync start --proxy \"vccw.test\" --config bs-config.js"
   },
   "repository": "git+ssh://git@github.com/magnorion/magnorion.git",
   "keywords": [

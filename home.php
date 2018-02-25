@@ -1,4 +1,8 @@
-<?php get_header(); ?>
-<!-- shall we begin? -->
-<h1> Webpack</h1>
+<?php 
+    /*
+    *   Home Page
+    ***/
+    get_header();
+?>
+
 <?php get_footer(); ?>

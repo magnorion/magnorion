@@ -1,5 +1,4 @@
 const webpack = require("webpack"),
-  LivereloadPlugin = require("webpack-livereload-plugin"),
   ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   entry: __dirname + "/assets/assets.js",
@@ -21,15 +20,12 @@ module.exports = {
         })
       },
       {
-        test: /\.(woff|woff2|ttf|svg|eot)/,
+        test: /\.(woff|woff2|ttf|svg|eot|jpg)/,
         use: ["url-loader"]
       }
     ]
   },
   plugins: [
-    new LivereloadPlugin({
-      port: 460
-    }),
     new webpack.optimize.UglifyJsPlugin({
       minimize: true
     }),
