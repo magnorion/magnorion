@@ -2,4 +2,4 @@ assets/vendor/**/
 node_modules
 vendor/
 assets/dist
-assets/dist/site-bundle.js
+assets/dist/**

@@ -1,8 +1,10 @@
 <?php
 
-    /*
-    *   Functions.php
-    *   Todas as funções e configurações do tema serão colocados aqui!
+    /**
+    * Functions.php
+    * Todas as funções e configurações do tema serão colocados aqui!
+    * @since 1.0
+    * @package magnorion
     */
 
     define( "ASSETS", get_template_directory_uri() . "/assets" );
