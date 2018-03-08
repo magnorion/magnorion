@@ -22,9 +22,6 @@
     </div>
 </section>
 <section class="col-md-12 container-holder" id="home-main-form">
-    <div class="background-container">
-        <img src="<?=ASSETS?>/images/top.jpg">
-    </div>
     <div class="container">
         <h2> <span>Formulário de Contato</span></h2>
         <div class="col-md-6">

@@ -57,18 +57,6 @@ section.container-holder {
     width: 1px;
     text-shadow: 1px 1px 2px #555;
   }
-  .background-container{
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    img{
-      position: relative;
-      width: 100%;
-      height: auto;
-      filter: blur(3px)
-    }
-  }
 }
 
 /*
@@ -152,7 +140,10 @@ nav#menu-principal{
 }
 
 #home-main-form{
+  background: url("../images/top.jpg") fixed no-repeat;
+  background-size: cover;
   h2{
+    
     color: #fff;
     text-shadow: 1px 1px 1px #555;
   }
