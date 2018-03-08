@@ -2,4 +2,5 @@ assets/vendor/**/
 node_modules
 vendor/
 assets/dist
-assets/dist/**
+assets/dist/**package.json
+.gitignore

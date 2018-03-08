@@ -18,9 +18,56 @@ ul{
     display: inline;
     font-family: "Cabin";
     margin-right: 15px;
+    a, a:active, a:focus, a:hover{
+      color: #fff;
+      text-decoration: none;
+    }
   }
   &#primary{
     font-size: 15px;
+  }
+}
+
+h1, h2, h3, p{
+  font-family: "Cabin" !important;
+}
+
+section.container-holder {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  h1, h2, h3, p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    position: relative;
+    margin-bottom: 45px;
+    span{
+      position: relative;
+    }
+  }
+  .container h2 span::after{
+    content: '\f00c';
+    color: mix(#139c5a, #fff, 90%);
+    font-family: "fontawesome";
+    position: absolute;
+    bottom: -15%;
+    right: 52%;
+    height: 1px;
+    width: 1px;
+    text-shadow: 1px 1px 2px #555;
+  }
+  .background-container{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    img{
+      position: relative;
+      width: 100%;
+      height: auto;
+      filter: blur(3px)
+    }
   }
 }
 
@@ -30,33 +77,150 @@ ul{
 
 nav#menu-principal{
   height: auto;
-  background: #fff;
   padding-bottom: 15px;
   padding-top: 30px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #555;
 }
 
 #primary-content{
   padding: 0px !important;
-  background: url("../images/header.jpg");
-  background-position: fixed;
-  margin-top: 5px;
+  background: url("../images/header.jpg") fixed no-repeat;
+  background-size: cover;
+  height: 80vh;
   .container{
-    height: 50vh;
     max-height: 300px;
     position: relative;
-    #page-title-holder{
-      margin-top: 12%;
+  }
+  #page-title-holder {
+      margin-top: 15vh;
+      h1 {
+          text-transform: uppercase;
+          font-family: "Cabin";
+          font-size: 2.2em;
+      }
+      p {
+          font-size: 1.2em;
+          line-height: 2;
+          font-family: "Cabin";
+          width: 70%;
+          margin: 0px auto;
+      }
       h1, p{
-        text-transform: uppercase;
         color: #fff;
         text-align: center;
-        text-shadow: 1px 1px 1px #000;
-        font-family: "Cabin"
+        text-shadow: 1px 1px 1px #555;
+      }
+  }
+}
+
+#home-main-posts{
+  background: mix(#c14d4d, #fff, 80%);
+  h2{
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+  }
+  .row-posts{
+    display: flex;
+    padding-top: 30px;
+    .box-posts-content{
+      width: 33%;
+      span{
+        text-align: center;
+        position: relative;
+        display: block;
+        margin-top: 15px;
+        font-family: "Cabin";
+        font-size: 1.5em;
+        color: #fff;
+        text-decoration: underline;
+        text-shadow: 1px 1px 1px #555;
       }
       p{
-        font-size: 13px;
-        line-height: 2;
+        font-size: 1em;
+        color: #fff;
+        margin-top: 15px;
       }
+      img{
+        width: 70%;
+        height: auto;
+        display: block;
+        margin: 0px auto;
+      }
+    }
+  }
+}
+
+#home-main-form{
+  h2{
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+  }
+  form{
+    padding: 30px;
+    background: #fff;
+    p{
+      margin-bottom: 15px !important;
+      label {
+          font-size: 0.7em !important;
+          text-align: left;
+          cursor: pointer;
+          width: 90% !important;
+          input, select, textarea{
+            cursor: text !important;
+            width: 100%;
+          }
+          input[type=text],
+          input[type=email], textarea {
+            padding: 5px;
+            background: mix(#555, #fff, 20%);
+            border: none;
+            &:focus{
+              background: mix(#555, #fff, 40%);
+            }
+          }
+          textarea {
+              height: 100px;
+              resize: none;
+          }
+      }
+      input[type='submit']{
+        background: mix(rgb(167, 0, 0), #fff, 50%);
+        border: solid 2px mix(rgb(167, 0, 0), #fff, 50%);
+        padding: 10px;
+        width: 200px;
+        border-radius: 50px;
+        font-size: 0.7em;
+        text-transform: uppercase;
+        color: #fff;
+        transition: 0.5s ease all;
+        &:hover{
+          background: mix(rgb(167, 0, 0), #fff, 10%);
+          color: mix(rgb(167, 0, 0), #fff, 50%);
+        }
+      }
+    }
+  }
+  .form-content-box{
+    p{
+      color: #fff;
+      text-shadow: 1px 1px 1px #555;
+      text-transform: none !important;
+      font-size: 1.5em;
+      margin-top: 25px;
+    }
+  }
+}
+
+footer{
+  background: #555;
+  color: #fff;
+  padding: 20px;
+  .footer-box{
+    padding: 0px !important;
+    margin-top: 20px;
+    &.right{
+      text-align: right;
     }
   }
 }

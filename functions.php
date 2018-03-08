@@ -28,3 +28,19 @@
         "https://fonts.googleapis.com/css?family=Cabin|Lobster" );
     }
     add_action("wp_enqueue_scripts", "assetsSite");
+
+    function excerptSize($length)
+    {
+        return 20;
+    }
+    add_filter( "excerpt_length",  "excerptSize", 20);
+
+    function mainPosts()
+    {
+        $args = [
+            "post_type" => "post",
+            "posts_per_page" => 3
+        ];
+
+        return new WP_Query($args);
+    }

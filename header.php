@@ -8,31 +8,29 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-    <header class="col-md-12">
-        <nav class="col-md-12" id="menu-principal">
-            <div class="container">
-                <div class="col-md-6" id="logo">
-                    <span>
-                        <a href="<?=home_url(); ?>">
-                            magnorion
-                        </a>
-                    </span>
-                </div>
-                <div class="col-md-6" id="menu-primary-holder">
-                    <ul id="primary" class="pull-right">
-                        <li> Home Page </li>
-                        <li> Projetos </li>
-                        <li> Sobre </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
     <section class="col-md-12" id="primary-content">
-        <div class="container">
-            <div id="page-title-holder">
-                <h1> Full-Stack Developer </h1>
-                <p> Desenvolveor PHP e NODE.js <br> Fotógrafo e Baixista nas horas vagas. </p>
+        <header class="col-md-12">
+            <nav class="col-md-12" id="menu-principal">
+                <div class="container">
+                    <div class="col-md-6">
+                        <div id="logo" class="pull-left">
+                            <span> <a href="">Logo</a> </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="menu-primary-holder">
+                        <?php wp_nav_menu( [
+                            "menu_class" => "pull-right",
+                            "menu_id" => "primary",
+                            "menu" => 2
+                        ] )?>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="col-md-12">
+            <div class="container" id="page-title-holder">
+                <h1> Lorem Ipsum </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in pulvinar sapien. Phasellus nec rutrum arcu. Duis feugiat rhoncus eros. Nullam ac congue turpis.</p>
             </div>
         </div>
     </section>
