@@ -7,7 +7,7 @@
 
     get_header();
 ?>
-<section id="single-content" class="container">
+<section id="single-content" class="container container-holder">
     <article class="col-md-8">
         <?php while (have_posts()) {
             the_post();

@@ -4,3 +4,5 @@ vendor/
 assets/dist
 assets/dist/**package.json
 .gitignore
+assets/images
+package.json

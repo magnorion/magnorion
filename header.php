@@ -11,7 +11,7 @@
     <?php if (is_home()): ?>
     <section class="col-md-12" id="primary-content">
     <?php else: ?>
-    <section class="col-md-12" id="primary-content" style="background:url(<?=get_the_post_thumbnail_url()?>) no-repeat fixed">
+    <section class="col-md-12" id="primary-content" style="background:url(<?=get_the_post_thumbnail_url()?>) no-repeat 100% 100% fixed">
     <?php endif; ?>
         <header class="col-md-12">
             <nav class="col-md-12" id="menu-principal">

@@ -14,7 +14,9 @@
             <?php while ($destaques->have_posts()): $destaques->the_post(); ?>
             <div class="box-posts-content">
                 <a href="<?=get_the_permalink();?>">
-                    <img class="img-circle" src="<?=get_the_post_thumbnail_url();?>" alt="">
+                    <div class="post-circle-box">
+                        <img src="<?=get_the_post_thumbnail_url();?>" alt="">
+                    </div>
                     <span> <?= get_the_title(); ?> </span>
                     <p> <?= get_the_excerpt(); ?> </p>
                 </a>
