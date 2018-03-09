@@ -10,9 +10,6 @@
     <body <?php body_class(); ?>>
     <?php if (is_home()): ?>
     <section class="col-md-12" id="primary-content">
-    <?php else: ?>
-    <section class="col-md-12" id="primary-content" style="background:url(<?=get_the_post_thumbnail_url()?>) no-repeat 100% 100% fixed">
-    <?php endif; ?>
         <header class="col-md-12">
             <nav class="col-md-12" id="menu-principal">
                 <div class="container">
@@ -31,19 +28,37 @@
                 </div>
             </nav>
         </header>
-        <?php if (is_home()): ?>
         <main class="col-md-12">
             <div class="container" id="page-title-holder">
                 <h1> Lorem Ipsum </h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in pulvinar sapien. Phasellus nec rutrum arcu. Duis feugiat rhoncus eros. Nullam ac congue turpis.</p>
             </div>
-        </div>
-        <?php endif; ?>
-        <?php if (!is_home()): ?>
+        </main>
+    </section>
+    <?php else: ?>
+    <header class="col-md-12 page-nav">
+        <nav class="col-md-12" id="menu-principal">
+            <div class="container">
+                <div class="col-md-6">
+                    <div id="logo" class="pull-left">
+                        <span> <a href="<?=home_url();?>">Logo</a> </span>
+                    </div>
+                </div>
+                <div class="col-md-6" id="menu-primary-holder">
+                    <?php wp_nav_menu( [
+                        "menu_class" => "pull-right",
+                        "menu_id" => "primary",
+                        "menu" => 2
+                    ] )?>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="col-md-12 page-primary-content" id="primary-content" style="background: url(<?=get_the_post_thumbnail_url();?>) 100% fixed no-repeat">
         <main class="col-md-12">
             <div class="container" id="page-title-holder">
                 <h1> <?=get_the_title(); ?> </h1>
             </div>
-        </div>
-        <?php endif; ?>
+        </main>
     </section>
+    <?php endif; ?>

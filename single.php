@@ -17,10 +17,7 @@
     <aside class="col-md-4">
         <h3> Categorias </h3>
         <ul>
-            <li> item 1 </li>
-            <li> item 2 </li>
-            <li> item 3 </li>
-            <li> item 4 </li>
+            <?php wp_list_categories(["title_li" => ""]); ?>
         </ul>
     </aside>
 </section>

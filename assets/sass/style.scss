@@ -60,12 +60,30 @@ nav#menu-principal{
   text-shadow: 1px 1px 1px #555;
 }
 
+.page-nav{
+  ul{
+    margin-top: 10px;
+    li a,
+    li a:hover,
+    li a:active {
+        color: #555 !important;
+        text-shadow: none;
+    }
+  }
+}
+
 
 #primary-content{
   padding: 0px !important;
   background: url("../images/header.jpg") fixed no-repeat;
   background-size: cover;
   height: 80vh;
+  &.page-primary-content{
+    height: 45vh !important;
+    #page-title-holder{
+      margin-top: 15vh !important;
+    }
+  }
   .container{
     max-height: 300px;
     position: relative;
@@ -202,10 +220,6 @@ nav#menu-principal{
   }
 }
 
-#single-content{
-  padding: 50px;
-}
-
 article{
   padding: 30px;
   p{
@@ -221,24 +235,29 @@ article{
 aside{
   overflow: auto;
   height: auto;
+  padding: 10px;
   h3{
     font-size: 1.5em;
     text-transform: uppercase;
     margin-bottom: 10px !important;
-    text-align: right;
+    text-align: right !important;
   }
   ul{
     margin: 0px;
     padding: 0px;
-    width: 70%;
+    width: 80%;
     float: right;
     li{
       display: block;
       margin: 0px;
       font-size: 1.3em;
-      text-align: left;
+      text-align: right;
       margin-bottom: 15px;
       border-bottom: 3px dotted #555;
+      a, a:hover, a:active{
+        color: #555;
+        text-decoration: none;
+      }
     }
   }
 }
