@@ -75,13 +75,13 @@ nav#menu-principal{
   padding: 0px !important;
   background: url("../images/header.jpg") fixed no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: 50vh;
   .container{
     max-height: 300px;
     position: relative;
   }
   #page-title-holder {
-      margin-top: 15vh;
+      margin-top: 10vh;
       h1 {
           text-transform: uppercase;
           font-family: "Cabin";
@@ -127,10 +127,12 @@ nav#menu-principal{
       p{
         font-size: 1em;
         color: #fff;
-        margin-top: 15px;
+        margin: 15px auto;
+        width: 80%;
       }
       img{
-        width: 70%;
+        width: 60%;
+        min-height: 200px;
         height: auto;
         display: block;
         margin: 0px auto;
@@ -199,6 +201,34 @@ nav#menu-principal{
       text-transform: none !important;
       font-size: 1.5em;
       margin-top: 25px;
+    }
+  }
+}
+
+#single-content{
+  padding: 30px;
+}
+
+article{
+  padding: 30px;
+  p{
+    font-size: 1.2em;
+    line-height: 27px;
+  }
+}
+
+aside{
+  h3{
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  ul{
+    margin: 0px;
+    padding: 0px;
+    li{
+      display: block;
+      margin: 0px;
+      font-size: 1.3em
     }
   }
 }
