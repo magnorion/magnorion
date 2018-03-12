@@ -54,7 +54,7 @@
             </div>
         </nav>
     </header>
-    <section class="col-md-12 page-primary-content" id="primary-content" style="background: url(<?=get_the_post_thumbnail_url();?>) 100% fixed no-repeat">
+    <section class="col-md-12 page-primary-content" id="primary-content" style="background: url(<?=get_the_post_thumbnail_url();?>) 100% no-repeat">
         <main class="col-md-12">
             <div class="container" id="page-title-holder">
                 <h1> <?=get_the_title(); ?> </h1>
