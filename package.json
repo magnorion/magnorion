@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --watch",
+    "prod": "webpack",
     "bs": "browser-sync start --proxy \"vagrant.localhost\" --config bs-config.js"
   },
   "repository": "git+ssh://git@github.com/magnorion/magnorion.git",
