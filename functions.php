@@ -1,4 +1,5 @@
 <?php
+
 /**
 * Functions.php
 * Todas as funções e configurações do tema serão colocados aqui!
@@ -28,12 +29,14 @@ function assetsSite()
 }
 add_action("wp_enqueue_scripts", "assetsSite");
 
+### Adiciona limite para o excerpt
 function excerptSize($length)
 {
     return 20;
 }
 add_filter( "excerpt_length",  "excerptSize", 20);
 
+### Retorna os 3 posts mais atuais
 function mainPosts()
 {
     $args = [
@@ -44,6 +47,7 @@ function mainPosts()
     return new WP_Query($args);
 }
 
+### Retorna os dados do header para as páginas
 function getPageStructure($id) 
 {
     if (is_archive()) {
@@ -57,4 +61,13 @@ function getPageStructure($id)
             "title" => get_the_title($id)
         ];
     }
+}
+
+### Retorna o title dependendo da página
+function titlePage()
+{
+    if (is_home()) {
+        return get_bloginfo() . " - " . get_bloginfo("description");
+    }
+    return get_the_title() . " - " . get_bloginfo();
 }

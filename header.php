@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title><?php bloginfo(); ?></title>
+        <title><?= titlePage(); ?></title>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
     <?php if (is_home()): ?>
     <section class="col-md-12" id="primary-content">
         <header class="col-md-12">
-            <nav class="col-md-12" id="menu-principal">
+            <nav id="menu-principal">
                 <div class="container">
                     <div class="col-md-6">
                         <div id="logo" class="pull-left">
