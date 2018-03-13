@@ -14,7 +14,7 @@
             the_content();
         } ?>
     </article>
-    <aside class="col-md-4">
+    <aside class="col-md-4 pull-right">
         <h3> Categorias </h3>
         <ul>
             <?php wp_list_categories(["title_li" => ""]); ?>

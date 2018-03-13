@@ -1,0 +1,46 @@
+#home-main-posts {
+    background: mix(#c14d4d, #fff, 80%);
+    h2 {
+        color: #fff;
+        text-shadow: 1px 1px 1px #555;
+    }
+    .row-posts {
+        display: flex;
+        padding-top: 30px;
+        .box-posts-content {
+            width: 33%;
+            span {
+                text-align: center;
+                position: relative;
+                display: block;
+                margin-top: 15px;
+                font-family: "Cabin";
+                font-size: 1.5em;
+                color: #fff;
+                text-decoration: underline;
+                text-shadow: 1px 1px 1px #555;
+            }
+            p {
+                font-size: 1em;
+                color: #fff;
+                margin: 15px auto;
+                width: 80%;
+            }
+            .post-circle-box {
+                width: 60%;
+                margin: 0px auto;
+                overflow: hidden;
+                border-radius: 100%;
+                height: 220px;
+                img {
+                    width: auto;
+                    height: 100%;
+                    display: block;
+                }
+            }
+            a:hover {
+                text-decoration: none !important;
+            }
+        }
+    }
+}

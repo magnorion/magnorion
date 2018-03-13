@@ -1,0 +1,65 @@
+#home-main-form {
+    background: url("../images/top.jpg") fixed no-repeat;
+    background-size: cover;
+    h2 {
+        color: #fff;
+        text-shadow: 1px 1px 1px #555;
+    }
+    form {
+        padding: 30px;
+        background: #fff;
+        p {
+            margin-bottom: 15px !important;
+            label {
+                font-size: 0.7em !important;
+                text-align: left;
+                cursor: pointer;
+                width: 90% !important;
+                input,
+                select,
+                textarea {
+                    cursor: text !important;
+                    width: 100%;
+                }
+                input[type=text],
+                input[type=email],
+                textarea {
+                    padding: 5px;
+                    background: mix(#555, #fff, 20%);
+                    border: none;
+                    &:focus {
+                        background: mix(#555, #fff, 40%);
+                    }
+                }
+                textarea {
+                    height: 100px;
+                    resize: none;
+                }
+            }
+            input[type='submit'] {
+                background: mix(rgb(167, 0, 0), #fff, 50%);
+                border: solid 2px mix(rgb(167, 0, 0), #fff, 50%);
+                padding: 10px;
+                width: 200px;
+                border-radius: 50px;
+                font-size: 0.7em;
+                text-transform: uppercase;
+                color: #fff;
+                transition: 0.5s ease all;
+                &:hover {
+                    background: mix(rgb(167, 0, 0), #fff, 10%);
+                    color: mix(rgb(167, 0, 0), #fff, 50%);
+                }
+            }
+        }
+    }
+    .form-content-box {
+        p {
+            color: #fff;
+            text-shadow: 1px 1px 1px #555;
+            text-transform: none !important;
+            font-size: 1.5em;
+            margin-top: 25px;
+        }
+    }
+}

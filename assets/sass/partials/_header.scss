@@ -1,0 +1,64 @@
+#logo {
+    span {
+        font-family: "lobster";
+        font-size: 30px;
+        a {
+            color: #FF7373;
+            &:active,
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/*
+* Nav principal
+*/
+
+nav#menu-principal {
+    height: auto;
+    padding-bottom: 15px;
+    padding-top: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+}
+
+#primary-content {
+    padding: 0px !important;
+    background: url("../images/header.jpg") fixed no-repeat;
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+    &.page-primary-content {
+        height: 45vh !important;
+        #page-title-holder {
+            margin-top: 15vh !important;
+        }
+    }
+    .container {
+        max-height: 300px;
+        position: relative;
+    }
+    #page-title-holder {
+        margin-top: 15vh;
+        h1 {
+            text-transform: uppercase;
+            font-family: "Cabin";
+            font-size: 2.2em;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 2;
+            font-family: "Cabin";
+            width: 70%;
+            margin: 0px auto;
+        }
+        h1,
+        p {
+            color: #fff;
+            text-align: center;
+            text-shadow: 1px 1px 1px #555;
+        }
+    }
+}
