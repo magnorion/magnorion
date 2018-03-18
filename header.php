@@ -8,14 +8,14 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-    <?php if (is_home()): ?>
+    <?php if (is_home() || is_front_page()): ?>
     <section class="col-md-12" id="primary-content">
         <header class="col-md-12">
             <nav id="menu-principal">
                 <div class="container">
                     <div class="col-md-6">
                         <div id="logo" class="pull-left">
-                            <span> <a href="<?=home_url();?>">Logo</a> </span>
+                            <span> <a href="<?=home_url();?>"><?php bloginfo("name"); ?></a> </span>
                         </div>
                     </div>
                     <div class="col-md-6" id="menu-primary-holder">
@@ -30,8 +30,10 @@
         </header>
         <main class="col-md-12">
             <div class="container" id="page-title-holder">
-                <h1> Lorem Ipsum </h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in pulvinar sapien. Phasellus nec rutrum arcu. Duis feugiat rhoncus eros. Nullam ac congue turpis.</p>
+                <?php while (have_posts()): the_post(); ?>
+                <h1> <?php the_title(); ?> </h1>
+                <p> <?php the_content(); ?> </p>
+                <?php endwhile; ?>
             </div>
         </main>
     </section>
@@ -41,7 +43,7 @@
             <div class="container">
                 <div class="col-md-6">
                     <div id="logo" class="pull-left">
-                        <span> <a href="<?=home_url();?>">Logo</a> </span>
+                        <span> <a href="<?=home_url();?>"><?php bloginfo("name"); ?></a> </span>
                     </div>
                 </div>
                 <div class="col-md-6" id="menu-primary-holder">
@@ -54,7 +56,7 @@
             </div>
         </nav>
     </header>
-    <?php $pageStructure = getPageStructure(get_the_id()); ?>
+    <?php $pageStructure = getPageStructure(get_the_id(), false); ?>
     <section class="col-md-12 page-primary-content" id="primary-content" style="background: url(<?=$pageStructure["image"];?>) 100% no-repeat">
         <main class="col-md-12">
             <div class="container" id="page-title-holder">

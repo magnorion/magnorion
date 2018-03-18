@@ -48,17 +48,29 @@ function mainPosts()
 }
 
 ### Retorna os dados do header para as páginas
-function getPageStructure($id) 
+function getPageStructure($id, $is_home) 
 {
+    $dados = [];
     if (is_archive()) {
         return [
             "image" => ASSETS . "/images/header.jpg",
             "title" => "Todos os Posts"
         ];
-    } else {
+    } else if(!$is_home){
+        $image = get_the_post_thumbnail_url($id);
+        if (empty($image)) {
+            $image = ASSETS . "/images/default.jpg";
+        }
+
         return [
-            "image" => get_the_post_thumbnail_url($id),
+            "image" => $image,
             "title" => get_the_title($id)
+        ];
+    } else if ($is_home) {
+        return [
+            "image" => ASSETS . "/images/header.jpg",
+            "title" => get_the_title($id),
+            "content" => get_the_content($id)
         ];
     }
 }
@@ -66,7 +78,7 @@ function getPageStructure($id)
 ### Retorna o title dependendo da página
 function titlePage()
 {
-    if (is_home()) {
+    if (is_home() || is_front_page()) {
         return get_bloginfo() . " - " . get_bloginfo("description");
     }
     return get_the_title() . " - " . get_bloginfo();
