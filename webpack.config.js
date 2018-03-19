@@ -9,6 +9,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(woff|woff2|ttf|svg|eot|jpg)/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 8000
+            }
+          }
+        ]
+      },
+      {
         test: /\.(s*)css$/,
         use: ["style-loader", "css-loader", "sass-loader"],
         use: ExtractTextPlugin.extract({
@@ -18,10 +29,6 @@ module.exports = {
             { loader: "sass-loader"}
           ]
         })
-      },
-      {
-        test: /\.(woff|woff2|ttf|svg|eot|jpg)/,
-        use: ["url-loader"]
       }
     ]
   },
