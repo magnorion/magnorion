@@ -1,3 +1,1 @@
-(function ($) {
-    console.log("teste");
-})(jQuery);
+console.log("magnorion");
