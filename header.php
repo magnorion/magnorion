@@ -9,7 +9,9 @@
     </head>
     <body <?php body_class(); ?>>
     <?php if (is_home() || is_front_page()): ?>
+    <?php while (have_posts()): the_post(); ?>
     <section class="col-md-12" id="primary-content">
+        <img id="img-principal" src="<?=get_the_post_thumbnail_url()?>" alt="">
         <header class="col-md-12">
             <nav id="menu-principal">
                 <div class="container">
@@ -30,13 +32,12 @@
         </header>
         <main class="col-md-12">
             <div class="container" id="page-title-holder">
-                <?php while (have_posts()): the_post(); ?>
                 <h1> <?php the_title(); ?> </h1>
                 <p> <?php the_content(); ?> </p>
-                <?php endwhile; ?>
             </div>
         </main>
     </section>
+    <?php endwhile; ?>
     <?php else: ?>
     <header class="col-md-12 page-nav">
         <nav class="col-md-12" id="menu-principal">
@@ -59,7 +60,7 @@
     <?php $pageStructure = getPageStructure(get_the_id(), false); ?>
     <section class="col-md-12 page-primary-content" id="primary-content">
         <main>
-            <img src="<?=$pageStructure["image"];?>" alt="">
+            <img id="img-principal" src="<?=$pageStructure["image"];?>" alt="">
             <div class="container" id="page-title-holder">
                 <h1> <?=$pageStructure["title"]; ?> </h1>
             </div>

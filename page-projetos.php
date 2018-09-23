@@ -4,7 +4,7 @@
  */
 get_header();
 $projetos = new WP_Query([
-    'post_type' => 'posts', 
+    'post_type' => 'post', 
     'posts_per_page' => -1
     ]);
 ?>

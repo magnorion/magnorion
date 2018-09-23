@@ -41,6 +41,7 @@ function mainPosts()
 {
     $args = [
         "post_type" => "post",
+        "category_name" => "destaque",
         "posts_per_page" => 3
     ];
 

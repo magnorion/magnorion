@@ -9,7 +9,7 @@
 ?>
 <section class="col-md-12 container-holder" id="home-main-posts">
     <div class="container">
-        <h2> <span>Posts em Destaques</span></h2>
+        <h2> <span>Projetos em Destaques</span></h2>
         <div class="row-posts">
             <?php while ($destaques->have_posts()): $destaques->the_post(); ?>
             <div class="box-posts-content">
@@ -23,16 +23,6 @@
             </div>
             <?php endwhile; ?>
         </div>
-    </div>
-</section>
-<section class="col-md-12 container-holder" id="about-theme">
-    <div class="container">
-        <h2> <span>Wordpress Theme</span></h2>
-        <div class="content-centered">
-            <p> Este tema esta disponível para download! </p>
-            <a href="https://github.com/magnorion/magnorion" class="btn btn-primary"> ver no github </a>
-        </div>
-
     </div>
 </section>
 <?php get_footer(); ?>
