@@ -57,8 +57,9 @@
         </nav>
     </header>
     <?php $pageStructure = getPageStructure(get_the_id(), false); ?>
-    <section class="col-md-12 page-primary-content" id="primary-content" style="background: url(<?=$pageStructure["image"];?>) 100% no-repeat">
-        <main class="col-md-12">
+    <section class="col-md-12 page-primary-content" id="primary-content">
+        <main>
+            <img src="<?=$pageStructure["image"];?>" alt="">
             <div class="container" id="page-title-holder">
                 <h1> <?=$pageStructure["title"]; ?> </h1>
             </div>
