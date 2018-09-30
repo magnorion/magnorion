@@ -17,7 +17,11 @@
                 <div class="container">
                     <div class="col-md-6">
                         <div id="logo" class="pull-left">
-                            <span> <a href="<?=home_url();?>"><?php bloginfo("name"); ?></a> </span>
+                            <span> 
+                                <a href="<?=home_url();?>">
+                                    <img src="<?=ASSETS?>/images/logo.png" alt="">
+                                </a> 
+                            </span>
                         </div>
                     </div>
                     <div class="col-md-6" id="menu-primary-holder">

@@ -1,12 +1,20 @@
+header {
+    background: #ddd;
+    z-index: 999;
+}
+
 #logo {
     span {
         font-family: "lobster";
-        font-size: 30px;
         a {
             color: #FF7373;
             &:active,
             &:hover {
                 text-decoration: none;
+            }
+            img {
+                width: 220px;
+                height: auto
             }
         }
     }
@@ -19,9 +27,13 @@
 nav#menu-principal {
     height: auto;
     padding-bottom: 15px;
-    padding-top: 30px;
+    padding-top: 15px;
     color: #fff;
     text-shadow: 1px 1px 1px #555;
+}
+
+#menu-primary-holder{
+    margin-top: 10px;
 }
 
 #primary-content {

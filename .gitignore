@@ -4,5 +4,4 @@ vendor/
 assets/dist
 package.json
 .gitignore
-assets/images
 package.json
