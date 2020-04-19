@@ -8,6 +8,7 @@ header {
         font-family: "lobster";
         a {
             color: #FF7373;
+            font-size: 2em;
             &:active,
             &:hover {
                 text-decoration: none;
@@ -32,8 +33,13 @@ nav#menu-principal {
     text-shadow: 1px 1px 1px #555;
 }
 
-#menu-primary-holder{
+#menu-primary-holder {
     margin-top: 10px;
+    #primary {
+        ul li a {
+            color: #FF7373;
+        }
+    }
 }
 
 #primary-content {

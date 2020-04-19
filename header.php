@@ -19,8 +19,8 @@
                         <div id="logo" class="pull-left">
                             <span> 
                                 <a href="<?=home_url();?>">
-                                    <img src="<?=ASSETS?>/images/logo.png" alt="">
-                                </a> 
+                                    <?php bloginfo("name"); ?>
+                                </a>
                             </span>
                         </div>
                     </div>

@@ -10,7 +10,7 @@
                 <p> Entre em contato para iniciarmos algum projeto! </p>
             </div>
             <div class="col-md-6">
-                <?= do_shortcode('[contact-form-7 id="12" title="Contact form 1"]'); ?>
+                <?= do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
             </div>
         </div>
     </section>

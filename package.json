@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --watch",
-    "prod": "webpack",
-    "bs": "browser-sync start --proxy \"vccw.test\" --config bs-config.js"
+    "prod": "webpack"
   },
   "repository": "git+ssh://git@github.com/magnorion/magnorion.git",
   "keywords": [
@@ -20,19 +19,20 @@
   "homepage": "https://github.com/magnorion/magnorion#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "css-loader": "^0.28.8",
-    "extract-text-webpack-plugin": "^3.0.2",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "css-loader": "^3.5.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
-    "webpack": "^3.10.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^2.9.7",
     "webpack-livereload-plugin": "^1.0.0"
-  },
-  "devDependencies": {
-    "file-loader": "^1.1.11"
   }
 }

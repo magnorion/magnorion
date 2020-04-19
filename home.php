@@ -25,14 +25,4 @@
         </div>
     </div>
 </section>
-<section class="col-md-12 container-holder" id="about-theme">
-    <div class="container">
-        <h2> <span>Wordpress Theme</span></h2>
-        <div class="content-centered">
-            <p> Este tema esta disponível para download! </p>
-            <a href="https://github.com/magnorion/magnorion" class="btn btn-primary"> ver no github </a>
-        </div>
-
-    </div>
-</section>
 <?php get_footer(); ?>

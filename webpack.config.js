@@ -25,7 +25,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
           use: [
-            { loader: "css-loader", options: {minimize: true}},
+            { loader: "css-loader" },
             { loader: "sass-loader"}
           ]
         })
@@ -33,9 +33,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      minimize: true
-    }),
     new ExtractTextPlugin("style.css"),
     new webpack.ProvidePlugin({
       jQuery: "jQuery",
