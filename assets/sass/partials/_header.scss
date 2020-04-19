@@ -1,5 +1,4 @@
 header {
-    background: #ddd;
     z-index: 999;
 }
 
@@ -45,7 +44,7 @@ nav#menu-principal {
 #primary-content {
     padding: 0px !important;
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
     position: relative;
     #img-principal {
         position: absolute;
@@ -65,21 +64,20 @@ nav#menu-principal {
         position: relative;
     }
     #page-title-holder {
-        margin-top: 20vh;
+        margin-top: 25vh;
         ul {
             max-width: 240px;
             li{
                 display: inline;
-                float: left;
             }
         }
         h1 {
             text-transform: uppercase;
             font-family: "Cabin";
-            font-size: 3.2em;
+            font-size: 3em;
         }
         p {
-            font-size: 1.2em;
+            font-size: 1em;
             line-height: 2;
             font-family: "Cabin";
             width: 70%;

@@ -43,27 +43,27 @@
     </section>
     <?php endwhile; ?>
     <?php else: ?>
-    <header class="col-md-12 page-nav">
-        <nav class="col-md-12" id="menu-principal">
-            <div class="container">
-                <div class="col-md-6">
-                    <div id="logo" class="pull-left">
-                        <span> <a href="<?=home_url();?>"><?php bloginfo("name"); ?></a> </span>
-                    </div>
-                </div>
-                <div class="col-md-6" id="menu-primary-holder">
-                    <?php wp_nav_menu( [
-                        "menu_class" => "pull-right",
-                        "menu_id" => "primary",
-                        "menu" => 2
-                    ] )?>
-                </div>
-            </div>
-        </nav>
-    </header>
     <?php $pageStructure = getPageStructure(get_the_id(), false); ?>
     <section class="col-md-12 page-primary-content" id="primary-content">
         <main>
+            <header class="col-md-12 page-nav">
+                <nav class="col-md-12" id="menu-principal">
+                    <div class="container">
+                        <div class="col-md-6">
+                            <div id="logo" class="pull-left">
+                                <span> <a href="<?=home_url();?>"><?php bloginfo("name"); ?></a> </span>
+                            </div>
+                        </div>
+                        <div class="col-md-6" id="menu-primary-holder">
+                            <?php wp_nav_menu( [
+                                "menu_class" => "pull-right",
+                                "menu_id" => "primary",
+                                "menu" => 2
+                            ] )?>
+                        </div>
+                    </div>
+                </nav>
+            </header>
             <img id="img-principal" src="<?=$pageStructure["image"];?>" alt="">
             <div class="container" id="page-title-holder">
                 <h1> <?=$pageStructure["title"]; ?> </h1>
