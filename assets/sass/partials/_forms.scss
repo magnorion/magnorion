@@ -38,18 +38,18 @@
                 }
             }
             input[type='submit'] {
-                background: mix(#7c2039, #fff, 50%);
-                border: solid 2px mix(#7c2039, #fff, 50%);
+                background: #cd7171;
+                border: solid 2px #cd7171;
                 padding: 10px;
                 width: 200px;
-                border-radius: 50px;
+                border-radius: 80px;
                 font-size: 0.7em;
                 text-transform: uppercase;
                 color: #fff;
                 transition: 0.5s ease all;
                 &:hover {
-                    background: mix(#7c2039, #fff, 10%);
-                    color: mix(#7c2039, #fff, 50%);
+                    background: #fff;
+                    color: #cd7171;
                 }
             }
         }
