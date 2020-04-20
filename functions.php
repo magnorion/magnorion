@@ -54,14 +54,11 @@ function getPageStructure($id, $is_home)
     $dados = [];
     if (is_archive()) {
         return [
-            "image" => ASSETS . "/images/header.jpg",
+            "image" => ASSETS . "/images/default.jpg",
             "title" => "Todos os Posts"
         ];
     } else if(!$is_home){
-        $image = get_the_post_thumbnail_url($id);
-        if (empty($image)) {
-            $image = ASSETS . "/images/default.jpg";
-        }
+        $image = get_the_post_thumbnail_url($id) ?? ASSETS . "/images/default.jpg";
 
         return [
             "image" => $image,
