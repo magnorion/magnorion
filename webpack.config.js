@@ -1,42 +1,62 @@
-const webpack = require("webpack"),
-  ExtractTextPlugin = require("extract-text-webpack-plugin");
-module.exports = {
-  entry: __dirname + "/assets/assets.js",
-  output: {
-    filename: "site-bundle.js",
-    path: __dirname + "/assets/dist"
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(woff|woff2|ttf|svg|eot|jpg)/,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              limit: 8000
-            }
-          }
-        ]
-      },
-      {
-        test: /\.(s*)css$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: [
-            { loader: "css-loader" },
-            { loader: "sass-loader"}
-          ]
-        })
-      }
-    ]
-  },
-  plugins: [
-    new ExtractTextPlugin("style.css"),
-    new webpack.ProvidePlugin({
-      jQuery: "jQuery",
-      $: "jQuery"
-    })
-  ]
-}
+// Generated using webpack-cli https://github.com/webpack/webpack-cli
+
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const isProduction = process.env.NODE_ENV == 'production';
+
+
+const stylesHandler = MiniCssExtractPlugin.loader;
+
+
+
+const config = {
+    entry: './assets/assets.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+    },
+    devServer: {
+        open: true,
+        host: 'localhost',
+    },
+    plugins: [
+        new MiniCssExtractPlugin(),
+
+        // Add your plugins here
+        // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/i,
+                loader: 'babel-loader',
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [stylesHandler, 'css-loader', 'postcss-loader', 'sass-loader'],
+            },
+            {
+                test: /\.css$/i,
+                use: [stylesHandler, 'css-loader', 'postcss-loader'],
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+                type: 'asset',
+            },
+
+            // Add your rules for custom modules here
+            // Learn more about loaders from https://webpack.js.org/loaders/
+        ],
+    },
+};
+
+module.exports = () => {
+    if (isProduction) {
+        config.mode = 'production';
+        
+        
+    } else {
+        config.mode = 'development';
+    }
+    return config;
+};
