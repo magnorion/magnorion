@@ -1,6 +1,7 @@
 assets/vendor/**/
 node_modules
 vendor/
+dist/
 assets/dist
 package.json
 .gitignore

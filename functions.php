@@ -8,6 +8,7 @@
 */
 
 define( "ASSETS", get_template_directory_uri() . "/assets" );
+define( "DIST", get_template_directory_uri() . "/dist" );
 
 ### Configuração do tema
 function magnorionConfig()
@@ -20,8 +21,8 @@ add_action("after_setup_theme", "magnorionConfig");
 ### Assets do tema
 function assetsSite()
 {
-    wp_enqueue_script( "core",  ASSETS . "/dist/site-bundle.js" );
-    wp_enqueue_style( "styles", ASSETS . "/dist/style.css" );
+    wp_enqueue_script( "core",  DIST . "/main.js" );
+    wp_enqueue_style( "styles", DIST . "/main.css" );
 
     // Fonts
     wp_enqueue_style( "google-fonts", 
